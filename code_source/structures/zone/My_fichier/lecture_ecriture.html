@@ -1,0 +1,62 @@
+/////////////////////////////HTML///////////////////////////////////
+<div id="entete-hide" class="panel-hide" style="background-color: #A7D41E;">
+  <img src="arrow_white_right.png" alt=">" class="rotateLeft" id="entete-hide-img">
+</div>
+////////////////////////////CSS/////////////////////////////////
+#entete-hide {
+position: absolute;
+left: 0;
+bottom: 238px;
+/* bottom: 215.5px; */
+padding: 17px 15px 17px 14px;
+z-index: 2;
+}
+
+#enteteText {
+padding: 15px;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+color: white;
+font-weight: bold;
+}
+#enteteInfo {
+bottom: 238px;
+left: 43px;
+height: 54px;
+white-space: normal;
+opacity: 0.9;
+z-index: 2;
+position: absolute;
+}
+/////////////////////////////////////JAVASCRIPT//////////////////////
+document.getElementById("entete-hide").addEventListener('click', enteteInfoHide);
+
+
+function enteteInfoHide() {
+mettreAjourAffichageEntete();
+if (document.getElementById("enteteInfo").style.width == '0px') {
+for (let index = 0; index < 371; index++) {
+setTimeout(() => {
+document.getElementById("enteteInfo").style.width = index + 'px';
+}, index * 0.9);
+}
+} else
+for (let index = 370; index > -1; index--) {
+setTimeout(() => {
+document.getElementById("enteteInfo").style.width = index + 'px';
+}, (371 - index) * 0.9);
+}
+if (document.getElementById("entete-hide-img").className == "rotateLeft") {
+document.getElementById("entete-hide-img").className = "rotateRight";
+} else {
+document.getElementById("entete-hide-img").className = "rotateLeft";
+}
+}
+
+
+
+MetreAjourEntete ekteb fiha l'entete par exemple ta3 les arbres :
+function mettreAjourAffichageEntete() {
+if (!isBtree)
+document.getElementById('enteteText').innerHTML = "Insertions : " + tree.entete.insertion + " | Blocs : " + tree.entete.blocs + " | Suppressions : " + tree.entete.suppression;
+else document.getElementById('enteteText').innerHTML = "Insertions : " + btree.entete.insertion + "  |  Blocs : " + btree.entete.blocs;
+}

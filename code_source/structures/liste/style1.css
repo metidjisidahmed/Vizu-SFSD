@@ -1,0 +1,288 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+html,body,p
+{
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+}
+body 
+{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.selection
+{
+    color: #fff;
+    font-size: 13px;
+    font-family: sans-serif;
+}
+/* #canvas {
+    
+    height: 100%;
+    width: 100%;
+
+} */
+
+/* .fort 
+{    
+    display: inline;
+    border: 2px solid black;
+    background: rgb(255, 232, 201);
+    font-size: 2rem;
+    text-align: center;
+    padding : 0.5rem;
+    
+
+} */
+#header 
+{
+    height: 40px;
+    padding-top: 0px;
+    padding-right: 30px;
+    padding-bottom: 0px;
+    padding-left: 30px;
+    background-color: black;
+    
+    
+}
+ #title
+ {
+    padding-left: 80px;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #aaa;
+
+ }
+ #title a { 
+     cursor: pointer; 
+    margin-right: 10px;
+    padding-top: 10px;
+    
+}
+#title .visited {
+    font-weight: 700;
+    color: yellow;
+}
+#instruction {
+    bottom: 255px;
+    right: 43px;
+    height: 54px;
+    white-space: normal;
+}
+#instruction-hide {
+    bottom: 255px;
+    right: 0;
+    padding: 17px 15px 17px 14px;
+}
+#instruction p {
+    padding: 10px;
+    color: white;
+    
+}
+#code 
+{
+bottom: 60px;
+    right: 43px;
+    height: 192px;
+    font-family: courier new,Courier,monospace;
+}
+#code-hide
+{
+  bottom:60px;
+  right: 0;
+  padding: 86px 14px 86px 15px;
+}
+#menu {
+    bottom: 60px;
+    left: 43px;
+    
+}
+#menu p{
+     
+        padding: 5px 10px;
+        cursor: pointer;
+    
+}
+#menu-hide {
+    bottom: 60px;
+    left: 0;
+   padding: 40px 14px   40px 15px  ;
+    
+}
+#cote_droit
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 40px;
+    background: #000;
+    z-index: -2;
+}
+#scene
+{
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    padding-top: 10px;
+}
+#cote_gauche
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 40px;
+    background: #000;
+    z-index: -1;
+}
+
+.panel-hide {
+    position: fixed;
+    cursor: pointer;
+    background: #777;
+}
+.panel {
+    position: fixed;
+    color: #000;
+    width: 0;
+    overflow: hidden;
+    background: #777;
+    white-space: nowrap;
+}
+#menu-option 
+{
+    margin-left: 3px;
+}
+.menu-ope
+{
+    position: fixed;
+}
+.create 
+{
+    bottom:137px ;
+}
+.insert 
+{
+    bottom: 85px;
+}
+.search
+ {
+      bottom: 110px;
+ }
+ .delete 
+ {
+     bottom:60px ;
+ }
+ #cote-bas {
+    padding: 12px 30px;
+    background: #000;
+    color: #fff;
+    font-size: 14px;
+    text-align: right;
+}
+#cote-bas {
+    position: fixed;
+    z-index: -1;
+    bottom: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+}
+#menu-action input {
+    /* width: 35px; */
+    padding:      5px 7px 4px;
+}
+input {
+    border: none;
+    outline: none;
+    margin: 0;
+}
+#menu-action input {
+    width: 100px;
+}
+.execute 
+{
+    padding: 3px 8px;
+    cursor: pointer;
+}
+.error{
+    background-color: red;
+}
+
+.success{
+    background-color: springgreen;
+}
+/* .BAR{
+    display: inline-block;
+    position: fixed;
+  
+}
+.item_f {
+    font-size: 1rem !important;
+}
+.key {
+    min-width: 4.5rem !important;
+
+} */
+/* input{
+    height:2rem !important;
+    display:block;
+    margin:auto;
+    text-align:center;
+    border-radius:10px;
+    font-size:1.5rem;
+    min-width:35vw;
+    color:darkblue;
+    font-weight: bold;
+    margin-bottom:1.5rem !important;
+} */
+input::placeholder {
+    text-align: center;
+    font-style: italic;
+}
+/* #submit_arb, #submit_init {
+    display:block;
+    margin:  1.5rem auto;
+    justify-self: center;
+    text-align: center;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: normal;
+    color : white;
+    padding:0.4rem 1.3rem;
+    background-color : green;
+    border-radius: 10px ;
+
+} */
+#yay{
+    display: inline;
+    background: green;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    margin-left: 1.5rem;
+    }
+    @keyframes ligne {
+        from {
+          margin-left: 100%;
+          
+        }
+        75% {
+          font-size: 300%;
+          margin-left: 25%;
+          width: 150%;
+        }
+      
+        to {
+          margin-left: 0%;
+          width: 100%;
+        }
+      }

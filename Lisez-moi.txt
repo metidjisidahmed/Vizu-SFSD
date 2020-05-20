@@ -1,0 +1,26 @@
+Pour l'outil :
+/*******************************************************************************************************/
+Pour ouvrir l'application en mode client ouvrir le fichier "VizuSFSD.html" avec un navigateur (consultez la notice d'utilisation pour les navigateurs adequats  )
+/*******************************************************************************************************/
+
+Pour Code source :
+/******************************************************************************************************/
+Page d'accueil:
+le code se compose d'une partie script et d'une feuille de style et d'une page html disponible sur le repertoire principale du code.  
+Operations : 
+cette partie se trouve dans le repertoire structures qui se trouve dans
+ce repertoire dispose de 6 autres repertoires, chaque repertoire represente une structures:
+-arbre : fichier arborescent 
+-liste:fichier vu comme liste 
+-indexTable : index sous forme de table 
+-IndexArbreDeRecherche: index sous forme d'arbre de recherche 
+-Hachage: operation de hachage 
+-zone :fichier vu comme table et zone memoire
+chaque structure dispose d'une partie script et d'une feuille de style et d'une page html ainsi que des photos pour l'aide en ligne 
+/*********************************************************************************************************/
+
+NB: C'est une application web qui ne necessite aucune installation particulière.
+
+
+ 
+

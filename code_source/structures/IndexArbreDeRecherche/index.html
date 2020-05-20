@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Arbre de recherche binaire</title>
+    <link rel="stylesheet" href="./style1.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./third_parties/fichier_tab.css">
+    <link rel="stylesheet" href="./third_parties/jquery-ui/jquery-ui.css">
+    <link rel="stylesheet" href="./third_parties/jquery-ui/jquery-ui.structure.css">
+    <link rel="stylesheet" href="./third_parties/jquery-ui/jquery-ui.theme.css">
+    <link rel="stylesheet" href="./third_parties/style_radio.css">
+    <style type="text/css" media="screen">
+        #editor {
+            position: absolute;
+            margin: -25px 0 0 -20px;
+            width: 50%;
+            height: 10%;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <span id="title">
+            <a class="visited" id="title-arbre">INDEX ARBRE DE RECHERCHE BINAIRE</a>
+            <!--<a id="title-NonDense" >non Dense</a>-->
+            <a class="visited" id="title-methode">Méthode 2</a>
+        </span>
+        <a href="../../../VizuSFSD.html">
+            <img id="homeIcone" src="home.png" alt="Page Acceuil" title="Page Acceuil">
+        </a>
+    </div>
+    <div id="cote_gauche"></div>
+    <div id="cote_droit"></div>
+    <div id="aide-hide"><a>Aide</a></div>
+    <div class="aide">
+        <img id="photo" class="aideClass" src="./aide/1.jpg" alt="">
+        <img id="photo1" class="aideClass" src="./aide/2.jpg" alt="">
+        <img id="photo2" class="aideClass" src="./aide/3.jpg" alt="">
+        <img id="photo3" class="aideClass" src="./aide/4.jpg" alt="">
+        <img id="photo4" class="aideClass" src="./aide/5.PNG" alt="">
+        <img id="photo5" class="aideClass" src="./aide/6.jpg" alt="">
+        <img id="photo6" class="aideClass" src="./aide/8.jpg" alt="">
+        <a id="quitte">quitter</a>
+        <a id="suivant">suivant</a>
+        <a id="precedent" style="display: none">précédent</a>
+    </div>
+    <div id="instruction" class="panel" style="background-color: rgb(109, 202, 129); width: 0px; ">
+        <p id="entete"></p>
+    </div>
+    <div id="instruction-hide" class="panel-hide" style="background-color: rgb(82, 188, 105);">
+        <img src="arrow_white_right.png" alt=">" class="rotateRight" id="instruction-hide-img">
+    </div>
+    <div id="code" class="panel" style="background-color: coral;  width: 0px; ">
+    </div>
+    <div id="code-hide" class="panel-hide" style="background-color: coral;  ">
+        <img src="arrow_white_right.png" alt=">" class="rotateRight" id="code-hide-img">
+    </div>
+    <div id="menu" class="panel" style="width: 0px; background-color: lightseagreen;  ">
+        <p id="restaurer" class="selection">Restaurer l'état initial</p>
+        <p id="effacer-trace" class="selection">Effacer la trace de l'opération</p>
+        <p id="actualiser-arbre" class="selection">Actualiser</p>
+        <p id="create" class="selection">Equilibrer l'Arbre</p>
+        <p id="search" class="selection">Rechercher</p>
+        <p id="insert" class="selection">Inserer</p>
+        <p id="delete" class="selection">Supprimer</p>
+        <p id="requete" class="selection">Requête à Intervalle</p>
+        <!--<p id="parcourt" class="selection">Réorganisation</p>-->
+    </div>
+    <div id="menu-action">
+        <div id="restaurer-action" class=" create menu-ope" style="left: 193px; display: flex; font-size: 10pt; display: none;">
+            <div id="create-empty" class="menu-option execute" style="float: left ; background-color:lightseagreen ; color:white ;margin-left: 3px;">
+                <p>Vide</p>
+            </div>
+            <div id="create-random" class="menu-option execute" style="float: left ;background-color: lightseagreen; color: white; margin-left: 3px;">
+                <p>Alea</p>
+            </div>
+        </div>
+        <div id="effacer-trace-action" class=" create menu-ope" style="left: 193px; display: flex; font-size: 10pt; display: none;">
+            <div id="create-empty" class="menu-option execute" style="float: left ; background-color:lightseagreen ; color:white ;margin-left: 3px;">
+                <p>Vide</p>
+            </div>
+            <div id="create-random" class="menu-option execute" style="float: left ;background-color: lightseagreen; color: white; margin-left: 3px;">
+                <p>Alea</p>
+            </div>
+        </div>
+        <div id="actualiser-arbre-action" class=" create menu-ope" style="left: 193px; display: flex; font-size: 10pt; display: none;">
+            <div id="create-empty" class="menu-option execute" style="float: left ; background-color:lightseagreen ; color:white ;margin-left: 3px;">
+                <p>Vide</p>
+            </div>
+            <div id="create-random" class="menu-option execute" style="float: left ;background-color: lightseagreen; color: white; margin-left: 3px;">
+                <p>Alea</p>
+            </div>
+        </div>
+        <div id="create-action" class=" create menu-ope" style="left: 193px; display: flex; font-size: 10pt; display: none;">
+            <div id="create-empty" class="menu-option execute" style="float: left ; background-color:lightseagreen ; color:white ;margin-left: 3px;">
+                <p>Vide</p>
+            </div>
+            <div id="create-random" class="menu-option execute" style="float: left ;background-color: lightseagreen; color: white; margin-left: 3px;">
+                <p>Alea</p>
+            </div>
+        </div>
+        <div id="search-action" class=" search menu-ope" style="left: 193px; display: none;">
+            <div id="search-input" class="menu-option" style="float: left; margin-left: 3px;">
+                <div id="cle-input" class="menu-option" style="float: left; background-color:lightseagreen ; font-size:14px; color:white">
+                    &nbsp;Cle Primaire
+                    <input type="number" id="sub_sea" value="100" style="background-color: black; color: white;">
+                </div>
+            </div>
+            <div id="submit_sea" class="execute" style="float: left; background-color: lightseagreen; color:white;">
+                <p>Aller</p>
+
+            </div>
+        </div>
+        <div id="insert-action" class=" insert menu-ope" style="left: 193px; display: none; ">
+            <div id="insert-input" class="menu-option" style="float: left; margin-left: 3px;">
+                <div id="cle-input" class="menu-option" style="float: left; background-color:lightseagreen ; font-size:14px; color:white">
+                    &nbsp;Cle Primaire
+                    <input type="number" id="cle" value="100" style="background-color: black; color: white;">
+                </div>
+                <div id="donnees-input" class="menu-option" style="float: left; margin-left: 3px; background-color:lightseagreen ; font-size:14px; color:white">
+                    &nbsp;Données
+                    <input type="text" id="donnees" value="ABCDE12345" style="background-color: black; color: white;">
+                </div>
+            </div>
+            <div id="submit_arb" class="execute" style="float: left; background-color: lightseagreen; color:white;">
+                <p>Insérer</p>
+
+            </div>
+        </div>
+        <div id="delete-action" class=" delete menu-ope" style="left: 193px; display: none; ">
+            <div id="delete-input" class="menu-option" style="float: left; margin-left: 3px;">
+                <div id="cle-input" class="menu-option" style="float: left; background-color:lightseagreen ; font-size:14px; color:white">
+                    &nbsp;Cle Primaire
+                    <input type="number" id="sub_del" value="100" style="background-color: black; color: white;">
+                </div>
+            </div>
+            <div id="submit_del" class="execute" style="float: left; background-color: lightseagreen; color:white;">
+                <p>Supprimer</p>
+            </div>
+        </div>
+        <div id="requete-action" class="requete menu-ope" style="left: 193px;display:none;">
+            <div id="max-input" class="menu-option" style="float: left; background-color:lightseagreen ; font-size:14px; color:white">
+                &nbsp;Min
+                <input type="number" id="sub_Min" value="001" style="background-color: black; color: white;">
+
+            </div>
+            <div id="max-input" class="menu-option" style="float: left; background-color:lightseagreen ; font-size:14px; color:white">
+                &nbsp;Max
+                <input type="number" id="sub_Max" value="999" style="background-color: black; color: white;">
+
+            </div>
+            <div id="submit_req" class="execute" style="float :left; background-color :lightseagreen; color:white;">
+                Aller</div>
+        </div>
+    </div>
+    <div id="menu-hide" class="panel-hide" style="
+background-color: lightseagreen;">
+        <img src="arrow_white_right.png" alt=">" class="rotateLeft" id="menu-hide-img">
+    </div>
+    <div id="cote-bas">
+        <a id="trigger-about"></a>
+        <a id="trigger-team"></a>
+        <a id="trigger-terms"></a>
+    </div>
+    <div id="speedControler">
+        <p id="rapide">lent</p>
+        <p id="lent">rapide</p>
+        <div class="slidecontainer">
+            <input type="range" min="50" max="350" value="100" class="slider" id="myRange">
+        </div>
+    </div>
+    <div id="current-action" class="panel" style="display: flex;">
+        <p>Ecritures : <span id="ecrt">0</span></p>
+        &nbsp;
+        <p>Lectures : <span id="lect">0</span></p>
+    </div>
+    <div class="kolech">
+        <div class="divtable"></div>
+        <div class="fichier"></div>
+        <div class="nouveauFichier"></div>
+        <div class="tree">
+            <div class="svg-container">
+                <svg id="svg" height="2500" width="2000">
+    <g transform="translate(0, 0)">
+    <g transform="translate(0, 0) scale(1)">
+                <g id="vertex">
+                </g>
+                <g id="vertexText">               
+                </g>
+                <g id="edge">
+                </g>
+                </g>
+                </g>
+            </svg>
+            </div>
+        </div>
+        <div class="modalEng">
+            <div class="model-content">
+                <div class="modal-header">
+                    <span class="closeBtn">&times;</span>
+                    <h2>Visualization</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="memory-header">
+                        <h4>Au niveau de la memoire</h4>
+                    </div>
+                    <div class="memory-body">
+                        <div id="editor">
+                        </div>
+                        <p>Structure du noeud</p>
+                    </div>
+                    <div class="disk-header">
+                        <h4>Au niveau du disque</h4>
+                    </div>
+                    <div class="disk-body">
+                        <table>
+                            <tr>
+                                <th>Cle Primaire</th>
+                                <th>Données</th>
+                            </tr>
+                            <tr>
+                                <th><span id="cleD"></span></th>
+                                <th><span id="contenu"></th>
+                        </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <h3>Index / Enregistrement</h3>
+                </div>
+            </div>
+        </div>
+        <div id="tabF">
+            <h1 id="chrg-title">Construction du Fichier / Chargement Initial</h1>
+            <br/>
+            <div id="fichier">
+                <input id="sub_nb_bloc" type="number" placeholder="Nombre de blocs ?">
+                <button id="submit_nb_bloc" style="margin-bottom: 1.5rem !important;">Soumettre</button>
+                
+                <input id="sub_nb_enreg_par_bloc" style="display: none;" type="number" placeholder="Nombre d'enregistrement par bloc ?">
+                <button id="submit_nb_enreg_par_bloc" style="display: none;" style="margin-bottom: 1.5rem !important;">Soumettre</button>
+                <!--
+                <input id="sub_nb_value" type="number" placeholder="Nombre de champ par enregistrement ?" style="display: none;" >
+                -->
+                <div id="ord" class="bulgy-radios" role="radiogroup" style="display: none ; justify-content: space-around ; margin-top: 1rem">
+                    <label>
+                        <input type="radio" name="options" checked />
+                        <span class="radio"></span>
+                                    <span class="label">Blocs Ordonés</span>
+                                    </label>
+                                    <label>
+                        <input type="radio" name="options" />
+                        <span class="radio"></span>
+                        <span class="label">Blocs Non ordonnés</span>
+                    </label>
+                    </div>
+                    <button id="submit_nb_value" style="display: none;" style="margin-bottom: 1.5rem !important;">Soumettre</button>
+                </div>
+                <div class="Fichier"></div>
+            </div>
+            <div id="IndexU">
+                <div class="buildIndexContainer" style="position: absolute; padding: 1% 0 0 10%;">
+                    <p id="buildIndex">Construire l'Index</p>
+                </div>
+                <div class="buildSuccessContainer" style="position: absolute; padding: 1% 0 0 10%;">
+                    <p id="buildSuccess">Parfait!, Vous pouvez maintenat utilisez les opérations sur l'index</p>
+                </div>
+            </div>
+        </div>
+</body>
+<script src="./ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/twilight");
+    editor.session.setMode("ace/mode/c_cpp");
+</script>
+
+<script src="./p5.min.js"></script>
+<script src="jquery.js"></script>
+<script src="./main.js "></script>
+<script src="./third_parties/anime-3.1.0.min.js"></script>
+<script src="./third_parties/jquery-3.4.1.js"></script>
+<script src="./third_parties/jquery-ui.js"></script>
+<script src="./third_parties/app.js"></script>
+
+</html>

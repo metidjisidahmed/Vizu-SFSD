@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    .aide {
+      overflow: hidden;
+      display: none;
+      position: fixed;
+      z-index: 10;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.575);
+      animation-name: openmodal;
+      animation-duration: 1s;
+    }
+
+    .aide img {
+      position: relative;
+      z-index: 11;
+    }
+
+    @keyframes openmodal {
+      from {
+        opacity: 0
+      }
+      to {
+        opacity: 1
+      }
+    }
+
+    .aideClass {
+      width: 70%;
+      height: 85%;
+      left: 170px;
+      top: 43px;
+    }
+
+    #quitte {
+      position: fixed;
+      z-index: 101;
+      right: 190px;
+      top: 30px;
+      background-color: rgb(34, 69, 200);
+      cursor: pointer;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 4px 17px;
+      border-radius: 5px;
+      margin-bottom: 0px;
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      font-size: 20px;
+      /* box-shadow: 3px 5px 82px #00000070; */
+    }
+
+    #suivant {
+      position: fixed;
+      z-index: 101;
+      right: 190px;
+      bottom: 30px;
+      background-color: rgb(34, 69, 200);
+      cursor: pointer;
+      color: #ffffff;
+      /* font-weight: bold; */
+      text-decoration: none;
+      padding: 4px 17px;
+      border-radius: 5px;
+      /* margin-bottom: 0px; */
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      font-size: 20px;
+      box-shadow: 3px 5px 82px #00000070;
+    }
+
+    #photo1,
+    #photo2 {
+      display: none;
+    }
+
+    #precedent {
+      position: fixed;
+      z-index: 101;
+      left: 140px;
+      bottom: 30px;
+      background-color: rgb(34, 69, 200);
+      cursor: pointer;
+      color: #ffffff;
+      /* font-weight: bold; */
+      text-decoration: none;
+      padding: 4px 17px;
+      border-radius: 5px;
+      /* margin-bottom: 0px; */
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      font-size: 20px;
+      box-shadow: 3px 5px 82px #00000070;
+    }
+
+    #aide-hide {
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      position: absolute;
+      right: 80px;
+      top: -5px;
+      padding: 11px 7px;
+      color: #fff;
+      text-align: center;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+<div id="aide-hide"><a>Aide</a></div>
+<div class="aide">
+  <img id="photo" class="aideClass" src="pic1.PNG" alt="">
+  <img id="photo1" class="aideClass" src="pic2.PNG" alt="">
+  <img id="photo2" class="aideClass" src="pic3.PNG" alt="">
+  <a id="quitte">quitter</a>
+  <a id="suivant">suivant</a>
+  <a id="precedent" style="display: none">précédent</a>
+</div>
+</body>
+<script>
+  document.querySelector('#quitte').addEventListener('mouseover', function(e) {
+    e.target.style.backgroundColor = 'red';
+  });
+  document.querySelector('#quitte').addEventListener('mouseout', function(e) {
+    e.target.style.backgroundColor = 'rgb(34, 69, 200)';
+  });
+
+  document.querySelector('#suivant').addEventListener('mouseover', function(e) {
+    e.target.style.backgroundColor = 'rgb(34, 111, 200)';
+  });
+  document.querySelector('#suivant').addEventListener('mouseout', function(e) {
+    e.target.style.backgroundColor = 'rgb(34, 69, 200)';
+  });
+
+
+  document.querySelector('#precedent').addEventListener('mouseover', function(e) {
+    e.target.style.backgroundColor = 'rgb(34, 111, 200)';
+  });
+  document.querySelector('#precedent').addEventListener('mouseout', function(e) {
+    e.target.style.backgroundColor = 'rgb(34, 69, 200)';
+  });
+
+
+  document.getElementById('quitte').addEventListener('click', function() {
+    $('.aide').fadeOut();
+  });
+  document.getElementById("aide-hide").addEventListener('click', function() {
+    document.querySelector(".aide").style.display = "block";
+    document.getElementById("photo2").style.display = 'none';
+    document.getElementById("photo1").style.display = 'none';
+    document.getElementById("suivant").style.display = "flex";
+    document.getElementById("photo").style.display = 'flex';
+    document.getElementById("precedent").style.display = "none";
+  });
+
+  document.getElementById("suivant").addEventListener('click', function() {
+    if (document.getElementById("photo").style.display != 'none') {
+      document.getElementById("photo").style.display = 'none';
+      document.getElementById("photo1").style.display = 'flex';
+      document.getElementById("precedent").style.display = "flex";
+    } else {
+      document.getElementById("photo1").style.display = 'none';
+      document.getElementById("photo2").style.display = 'flex';
+      document.getElementById("suivant").style.display = "none";
+    }
+  });
+
+  document.getElementById("precedent").addEventListener('click', function() {
+    if (document.getElementById("photo2").style.display != 'none') {
+      document.getElementById("photo2").style.display = 'none';
+      document.getElementById("photo1").style.display = 'flex';
+      document.getElementById("suivant").style.display = "flex";
+    } else {
+      document.getElementById("photo1").style.display = 'none';
+      document.getElementById("photo").style.display = 'flex';
+      document.getElementById("precedent").style.display = "none";
+    }
+  });
+</script>
+</html>

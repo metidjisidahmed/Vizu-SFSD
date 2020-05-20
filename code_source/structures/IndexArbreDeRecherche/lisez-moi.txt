@@ -1,0 +1,4 @@
+---------------------------------------------------------------------------------------------
+[*] Le code du programme se trouve dans le fichier : main.js				     |
+[*] Les répertoires 'third parties' et 'ace' sont utile pour l'application est sont externes |
+---------------------------------------------------------------------------------------------

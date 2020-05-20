@@ -1,0 +1,715 @@
+#current-action {
+    top: 50px;
+    right: 150px;
+    width: 400px;
+    display: block;
+    background: 0 0;
+    overflow: normal;
+    white-space: normal;
+    text-align: right;
+    color: #000;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: cursive;
+    /* display: none; */
+}
+
+table,
+th,
+td,
+tr {
+    transition: background-color 500ms;
+    position: relative;
+    z-index: 1;
+}
+
+* {
+    transform: width 2s;
+}
+
+#reorganisation {
+    display: flex;
+}
+
+.divtable {
+    /* width: 50%; */
+    margin-left: 100px;
+}
+
+.fichier {
+    animation-timing-function: linear;
+    animation: alternate;
+}
+
+.decalage {
+    animation-timing-function: linear;
+    animation: decal 2s alternate;
+    position: relative;
+    z-index: 2;
+    opacity: 1;
+}
+
+@keyframes decal {
+    from {
+        top: 0px;
+    }
+    to {
+        top: 21px;
+    }
+}
+
+@keyframes mymove {
+    from {
+        left: 0px;
+    }
+    to {
+        left: 427px;
+    }
+}
+
+.kolech {
+    width: 100%;
+    /*height: 100%; */
+    display: grid;
+    position: absolute;
+    z-index: 1;
+    top: 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+body,
+p {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: #F9F9F9;
+}
+
+.selection {
+    color: #fff;
+    font-size: 13px;
+    font-family: sans-serif;
+}
+
+#header {
+    height: 40px;
+    padding-top: 0px;
+    padding-right: 30px;
+    padding-bottom: 0px;
+    padding-left: 30px;
+    background-color: black;
+}
+
+#title {
+    padding-left: 80px;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #aaa;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+#title a {
+    cursor: pointer;
+    margin-right: 10px;
+    padding-top: 8px;
+}
+
+#buttonRequete {
+    padding-left: 200px;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #aaa;
+    visibility: hidden;
+}
+
+#buttonRequete a {
+    cursor: pointer;
+}
+
+#title .visited {
+    font-weight: 700;
+    color: #fff;
+}
+
+#instruction {
+    bottom: 255px;
+    right: 43px;
+    height: 54px;
+    white-space: normal;
+    opacity: 0.95;
+    z-index: 2;
+    position: absolute;
+}
+
+#instruction-hide {
+    position: absolute;
+    bottom: 255px;
+    right: 0;
+    padding: 17px 15px 17px 14px;
+    z-index: 2;
+}
+
+#entete-hide {
+    position: absolute;
+    left: 0;
+    bottom: 191.5px;
+    padding: 17px 15px 17px 14px;
+    z-index: 2;
+}
+
+#enteteText {
+    padding: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    font-weight: bold;
+}
+
+#enteteInfo {
+    bottom: 191.5px;
+    left: 43px;
+    height: 54px;
+    white-space: normal;
+    opacity: 0.9;
+    z-index: 2;
+    position: absolute;
+}
+
+#homeIcone {
+    width: 28px;
+    position: absolute;
+    z-index: 10;
+    top: 6px;
+    left: 42px;
+    cursor: pointer;
+}
+
+#code {
+    bottom: 60px;
+    right: 43px;
+    height: 192px;
+    opacity: 0.95;
+    letter-spacing: 0.5px;
+    position: absolute;
+    z-index: 2;
+}
+
+#code-hide {
+    position: absolute;
+    bottom: 60px;
+    right: 0;
+    padding: 86px 14px 86px 15px;
+    z-index: 2;
+}
+
+#menu {
+    bottom: 60px;
+    left: 43px;
+    font-size: 13px;
+    position: absolute;
+    z-index: 2;
+}
+
+#instructionText {
+    padding: 10px;
+    color: rgb(255, 255, 255);
+}
+
+#menu p {
+    padding: 5px 10px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+#degre p {
+    padding: 5px;
+    padding-bottom: 5px;
+    padding-top: 10px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+#header a {
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#code p {
+    padding: 3px 10px;
+    margin: 0;
+    font-size: 13px;
+    color: rgb(255, 255, 255);
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+#menu-hide {
+    position: absolute;
+    z-index: 2;
+    bottom: 60px;
+    padding: 54.5px 14px 54.5px 15px;
+}
+
+#cote_droit {
+    position: absolute;
+    right: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: 100%;
+    width: 40px;
+    background: #000;
+}
+
+#scene {
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    padding-top: 10px;
+}
+
+#cote_gauche {
+    position: absolute;
+    height: 100%;
+    width: 40px;
+    background: #000;
+}
+
+.panel-hide {
+    position: fixed;
+    cursor: pointer;
+    background: #777;
+}
+
+.panel {
+    position: absolute;
+    color: #000;
+    width: 0;
+    overflow: hidden;
+    background: #777;
+    white-space: nowrap;
+}
+
+#menu-option {
+    position: absolute;
+    margin-left: 3px;
+}
+
+.menu-ope {
+    position: fixed;
+}
+
+.enr2 {
+    position: absolute;
+    bottom: 187px;
+    float: left;
+}
+
+.create {
+    position: absolute;
+    bottom: 187px;
+    float: left;
+    z-index: 2;
+}
+
+.insert {
+    position: absolute;
+    float: left;
+    bottom: 111px;
+    z-index: 2;
+}
+
+.search {
+    position: absolute;
+    float: left;
+    bottom: 136px;
+    z-index: 2;
+}
+
+.delete {
+    position: absolute;
+    bottom: 88px;
+    float: left;
+    z-index: 2;
+}
+
+.requete {
+    position: absolute;
+    bottom: 60px;
+    float: left;
+    z-index: 2;
+}
+
+table {
+    text-align: center;
+    border: 1px #000 outset;
+}
+
+.divtable td {
+    border: 0.5px #000 ridge;
+    /* border-spacing: 1px; */
+}
+
+.fichier th {
+    border-bottom: #000 ridge;
+}
+
+.fichier table {
+    border-spacing: 0px;
+    border: #000 outset;
+}
+
+.fichier td {
+    border-bottom: 1px #000 outset;
+    width: 20px;
+}
+
+.nouveauFichier th {
+    border-bottom: #000 ridge;
+}
+
+.nouveauFichier table {
+    border-spacing: 0px;
+    border: #000 outset;
+}
+
+.nouveauFichier td {
+    border-bottom: 1px #000 outset;
+    width: 20px;
+}
+
+.bloc {
+    border-top: 1px #000 outset;
+    background-color: #000;
+}
+
+#cote-bas {
+    padding: 12px 30px;
+    background: #000;
+    color: #fff;
+    font-size: 12px;
+    text-align: right;
+    position: absolute;
+    z-index: 2;
+}
+
+#sub_Min,
+#sub_Max {
+    width: 45px;
+    padding: 5px 3px 4px;
+}
+
+#cote-bas a {
+    padding-left: 15px;
+    cursor: pointer;
+}
+
+#cote-bas {
+    position: absolute;
+    bottom: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+}
+
+#menu-action input {
+    padding: 5px 7px 4px;
+}
+
+input {
+    border: none;
+    outline: none;
+    margin: 0;
+}
+
+input:not(.requete) {
+    width: 100px;
+}
+
+.execute {
+    padding: 3px 8px;
+    cursor: pointer;
+}
+
+.error {
+    background-color: red;
+}
+
+.success {
+    background-color: springgreen;
+}
+
+#degre {
+    position: absolute;
+    z-index: 2;
+    top: 41px;
+    height: 100px;
+    width: 125px;
+    right: 71px;
+    opacity: 0.8;
+}
+
+#degre-hide {
+    position: absolute;
+    top: 0;
+    right: 150px;
+    padding: 10px 17px 10px 17px;
+}
+
+.rotateLeft {
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+}
+
+.rotateRight {
+    transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+}
+
+.rotateTop {
+    transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+}
+
+.ligneExecute {
+    background-color: black;
+}
+
+.rotateDown {
+    transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+}
+
+input::placeholder {
+    text-align: center;
+    font-style: italic;
+}
+
+#yay {
+    display: inline;
+    background: green;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    margin-left: 1.5rem;
+}
+
+@keyframes ligne {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.slidecontainer {
+    width: 10px;
+}
+
+#rapide {
+    position: absolute;
+    right: 19px;
+}
+
+#lent {
+    position: absolute;
+    left: 108px;
+    bottom: -1.5px;
+}
+
+.slidecontainer p {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 13px;
+    color: #fff;
+}
+
+#speedControler {
+    bottom: 13px;
+    position: absolute;
+    z-index: 3;
+    left: 100px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 6px;
+    background: rgb(136, 130, 130);
+    outline: none;
+    opacity: 1;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 2;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 11px;
+    height: 6px;
+    background: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+
+/* /////////::aide en ligne///////////////// */
+
+.aide {
+    overflow: hidden;
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.575);
+    animation-name: openmodal;
+    animation-duration: 1s;
+}
+
+.aide img {
+    position: relative;
+    z-index: 11;
+}
+
+@keyframes openmodal {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.aideClass {
+    width: 70%;
+    height: 85%;
+    left: 170px;
+    top: 43px;
+}
+
+#quitte {
+    transition: background-color 500ms;
+    position: fixed;
+    z-index: 101;
+    right: 190px;
+    top: 30px;
+    background-color: rgb(34, 69, 200);
+    cursor: pointer;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 4px 17px;
+    border-radius: 5px;
+    margin-bottom: 0px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 20px;
+    /* box-shadow: 3px 5px 82px #00000070; */
+}
+
+#suivant {
+    transition: background-color 500ms;
+    position: fixed;
+    z-index: 101;
+    right: 190px;
+    bottom: 30px;
+    background-color: rgb(34, 69, 200);
+    cursor: pointer;
+    color: #ffffff;
+    /* font-weight: bold; */
+    text-decoration: none;
+    padding: 4px 17px;
+    border-radius: 5px;
+    /* margin-bottom: 0px; */
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 20px;
+    box-shadow: 3px 5px 82px #00000070;
+}
+
+#precedent {
+    transition: background-color 500ms;
+    position: fixed;
+    z-index: 101;
+    left: 140px;
+    bottom: 30px;
+    background-color: rgb(34, 69, 200);
+    cursor: pointer;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 4px 17px;
+    border-radius: 5px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 20px;
+    box-shadow: 3px 5px 82px #00000070;
+}
+
+#aide-hide {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    position: absolute;
+    right: 80px;
+    top: -5px;
+    padding: 11px 7px;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.divtable th,
+.divtable tr,
+.divtable td {
+    width: 25px;
+}
+
+.fichier th,
+.fichier tr,
+.fichier td {
+    width: 25px;
+}

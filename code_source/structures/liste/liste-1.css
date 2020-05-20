@@ -1,0 +1,739 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    transform: width 2s;
+}
+
+#body,
+p {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+}
+
+#body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#degre p {
+    padding: 5px;
+    padding-bottom: 5px;
+    padding-top: 10px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    /* text-align: center; */
+}
+
+.selection {
+    color: #fff;
+    font-size: 13px;
+    font-family: sans-serif;
+}
+
+#header {
+    height: 40px;
+    padding-top: 0px;
+    padding-right: 30px;
+    padding-bottom: 0px;
+    padding-left: 30px;
+    top: 0;
+    background-color: black;
+}
+
+#title {
+    padding-left: 80px;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #aaa;
+}
+
+#title a {
+    cursor: pointer;
+    margin-right: 10px;
+    padding-top: 10px;
+}
+
+#title .visited {
+    font-weight: 700;
+    color: #fff;
+}
+
+#instruction {
+    bottom: 362px;
+    right: 43px;
+    height: 54px;
+    white-space: normal;
+    opacity: 0.8;
+}
+
+#instruction-hide {
+    bottom: 362px;
+    right: 0;
+    padding: 17px 15px 17px 14px;
+}
+
+#instruction p {
+    font-family: cursive;
+    padding: 10px;
+    color: rgb(255, 232, 201);
+}
+
+#code {
+    bottom: 60px;
+    right: 43px;
+    height: 300px;
+    font-family: courier new, Courier, monospace;
+    overflow: scroll;
+}
+
+#code p {
+    font-family: cursive;
+    color: aliceblue;
+}
+
+#code-hide {
+    bottom: 62px;
+    right: 0;
+    padding: 138.5px 14px 138.5px 15px;
+}
+
+#menu {
+    bottom: 65px;
+    left: 43px;
+    font-family: pt sans;
+    font-size: 13px;
+    transition: background-color 5ms;
+}
+
+#menu p {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#header a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 500ms;
+}
+
+#code p {
+    padding: 3px 10px;
+    margin: 0;
+    font-size: 13px;
+    color: white;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+#menu-hide {
+    left: 0;
+    padding: 65px 14px 65px 15px;
+    bottom: 68px;
+}
+
+#cote_droit {
+    position: absolute;
+    ;
+    right: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: 100%;
+    width: 40px;
+    background: #000;
+}
+
+#scene {
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    padding-top: 10px;
+    overflow-x: scroll;
+}
+
+#cote_gauche {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 40px;
+    background: #000;
+}
+
+.panel-hide {
+    position: absolute;
+    cursor: pointer;
+    background: #777;
+}
+
+.panel {
+    position: fixed;
+    color: #000;
+    width: 0;
+    overflow: hidden;
+    background: #777;
+    white-space: nowrap;
+}
+
+#menu-option {
+    margin-left: 3px;
+}
+
+.menu-ope {
+    position: fixed;
+}
+
+.create {
+    bottom: 168px;
+    float: left;
+}
+
+.insert {
+    bottom: 116px;
+}
+
+.search {
+    bottom: 141px;
+}
+
+.delete {
+    bottom: 91px;
+}
+
+.deleteall {
+    bottom: 85px;
+}
+
+.requette {
+    bottom: 58px;
+}
+
+.requete {
+    position: absolute;
+    bottom: 58px;
+    float: left;
+}
+
+#sub_Min,
+#sub_Max {
+    width: 40px;
+    padding: 5px 3px 4px;
+}
+
+#cote-bas {
+    padding: 12px 30px;
+    background: #000;
+    color: #fff;
+    font-size: 12px;
+    text-align: right;
+}
+
+#cote-bas {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    height: 35px;
+}
+
+#cote-bas a {
+    padding-left: 15px;
+    cursor: pointer;
+}
+
+#menu-action input {
+    padding: 5px 7px 4px;
+}
+
+input {
+    border: none;
+    outline: none;
+    margin: 0;
+}
+
+#menu-action input {
+    width: 100px;
+}
+
+.execute {
+    padding: 3px 8px;
+    cursor: pointer;
+}
+
+.error {
+    background-color: red;
+}
+
+.success {
+    background-color: springgreen;
+}
+
+#degre {
+    position: absolute;
+    top: 41px;
+    right: 135px;
+    opacity: 0.5;
+    z-index: 2;
+}
+
+#degre-hide {
+    position: absolute;
+    top: 0;
+    right: 150px;
+    padding: 10px 17px 10px 17px;
+}
+
+.rotateLeft {
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+}
+
+.rotateRight {
+    transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+}
+
+.rotateTop {
+    transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+}
+
+.ligneExecute {
+    background-color: black;
+}
+
+.rotateDown {
+    transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+}
+
+.slidecontainer {
+    width: 10px;
+}
+
+#rapide {
+    position: absolute;
+    right: 19px;
+}
+
+#lent {
+    position: absolute;
+    left: 108px;
+    bottom: -1.5px;
+}
+
+.slidecontainer p {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 13px;
+    color: #fff;
+}
+
+#speedControler {
+    bottom: 13px;
+    position: absolute;
+    z-index: 3;
+    left: 100px;
+}
+
+#myRange {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 90px;
+    height: 6px;
+    background: rgb(136, 130, 130);
+    outline: none;
+    opacity: 1;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 2;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 11px;
+    height: 6px;
+    background: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.aide {
+    overflow: hidden;
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.575);
+    animation-name: openmodal;
+    animation-duration: 1s;
+}
+
+.aide img {
+    position: relative;
+    z-index: 11;
+}
+
+@keyframes openmodal {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.aideClass {
+    width: 70%;
+    height: 85%;
+    left: 170px;
+    top: 43px;
+}
+
+#quitte {
+    position: fixed;
+    z-index: 101;
+    right: 190px;
+    top: 30px;
+    background-color: rgb(34, 69, 200);
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    padding: 4px 17px;
+    border-radius: 5px;
+    margin-bottom: 0px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 20px;
+}
+
+#suivant {
+    position: fixed;
+    z-index: 101;
+    right: 190px;
+    bottom: 30px;
+    background-color: rgb(34, 69, 200);
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    padding: 4px 17px;
+    border-radius: 5px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 20px;
+    box-shadow: 3px 5px 82px #00000070;
+}
+
+#photo1,
+#photo2 {
+    display: none;
+}
+
+#precedent {
+    position: fixed;
+    z-index: 101;
+    left: 140px;
+    bottom: 30px;
+    background-color: rgb(34, 69, 200);
+    cursor: pointer;
+    color: #ffffff;
+    /* font-weight: bold; */
+    text-decoration: none;
+    padding: 4px 17px;
+    border-radius: 5px;
+    /* margin-bottom: 0px; */
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 20px;
+    box-shadow: 3px 5px 82px #00000070;
+}
+
+#aide-hide {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    position: absolute;
+    right: 80px;
+    top: -5px;
+    padding: 11px 7px;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+input::placeholder {
+    text-align: center;
+    font-style: italic;
+}
+
+#yay {
+    display: inline;
+    background: green;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    margin-left: 1.5rem;
+}
+
+@keyframes ligne {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+body {
+    overflow: hidden;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+}
+
+rect {
+    stroke-width: 3px;
+}
+
+.highlight {
+    background-color: #777;
+}
+
+path {
+    marker-end: url(#arrow);
+}
+
+text {
+    text-anchor: middle;
+    font-weight: bold;
+    font-family: 'Segoe UI';
+    overflow: scroll;
+}
+
+rect {
+    stroke-width: 3px;
+    overflow: scroll;
+}
+
+line {
+    stroke-width: 3px;
+    /* stroke:yellow; */
+}
+
+#blocs {
+    overflow: scroll;
+}
+
+#pere_svg {
+    overflow: scroll;
+    z-index: -2;
+}
+
+#homeIcone {
+    width: 28px;
+    position: absolute;
+    z-index: 10;
+    top: 6px;
+    left: 42px;
+    cursor: pointer;
+}
+
+.aide {
+    overflow: hidden;
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.575);
+    animation-name: openmodal;
+    animation-duration: 1s;
+}
+
+.aide img {
+    position: relative;
+    z-index: 11;
+}
+
+@keyframes openmodal {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.aideClass {
+    width: 70%;
+    height: 85%;
+    left: 170px;
+    top: 43px;
+}
+
+#quitte {
+    position: fixed;
+    z-index: 101;
+    right: 190px;
+    top: 30px;
+    background-color: rgb(34, 69, 200);
+    cursor: pointer;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 4px 17px;
+    border-radius: 5px;
+    margin-bottom: 0px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 20px;
+    /* box-shadow: 3px 5px 82px #00000070; */
+}
+
+#suivant {
+    position: fixed;
+    z-index: 101;
+    right: 190px;
+    bottom: 30px;
+    background-color: rgb(34, 69, 200);
+    cursor: pointer;
+    color: #ffffff;
+    /* font-weight: bold; */
+    text-decoration: none;
+    padding: 4px 17px;
+    border-radius: 5px;
+    /* margin-bottom: 0px; */
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 20px;
+    box-shadow: 3px 5px 82px #00000070;
+}
+
+#photo1,
+#photo2 {
+    display: none;
+}
+
+#precedent {
+    position: fixed;
+    z-index: 101;
+    left: 140px;
+    bottom: 30px;
+    background-color: rgb(34, 69, 200);
+    cursor: pointer;
+    color: #ffffff;
+    /* font-weight: bold; */
+    text-decoration: none;
+    padding: 4px 17px;
+    border-radius: 5px;
+    /* margin-bottom: 0px; */
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 20px;
+    box-shadow: 3px 5px 82px #00000070;
+}
+
+#aide-hide {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    position: absolute;
+    right: 80px;
+    top: -5px;
+    padding: 11px 7px;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#current-action {
+    top: 50px;
+    right: 150px;
+    width: 400px;
+    display: block;
+    background: 0 0;
+    overflow: normal;
+    white-space: normal;
+    text-align: right;
+    color: #000;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: cursive;
+}
+
+
+/* width */
+
+::-webkit-scrollbar {
+    /* padding-bottom: 47px;
+    position: absolute; */
+    width: 10px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    background: #949494;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: #258e88;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: rgb(21, 110, 106);
+}

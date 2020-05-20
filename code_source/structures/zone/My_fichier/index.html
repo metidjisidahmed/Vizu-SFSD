@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Fichier tableau</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../jquery-ui.css">
+    <link rel="stylesheet" href="../jquery-ui.structure.css">
+    <link rel="stylesheet" href="../jquery-ui.theme.css">
+    <link rel="stylesheet" href="../style_radio.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.1.0/anime.js"></script>
+    <script src="../jquery.js"></script>
+    <script src="../jquery-ui.js"></script>
+    <script src="app.js"></script>
+
+</head>
+
+<body style="background-color: rgb(10,10,10)">
+    <div id="body" style="overflow-y: auto ; background-color: rgb(10 , 10 ,10)">
+        <div id="aide-hide"><a>Aide</a></div>
+        <div class="aide">
+            <img id="photo1" class="aideClass" src="1final.PNG" alt="">
+            <img id="photo2" class="aideClass" src="2.2final.PNG" alt="">
+            <img id="photo3" class="aideClass" src="3.1final.PNG" alt="">
+            <img id="photo4" class="aideClass" src="4.1final.PNG" alt="">
+            <img id="photo5" class="aideClass" src="5final.PNG" alt="">
+            <img id="photo6" class="aideClass" src="6final.PNG" alt="">
+            <a id="quitte">quitter</a>
+            <a id="suivant">suivant</a>
+            <a id="precedent" style="display: none">précédent</a>
+        </div>
+
+        <div id="speedControler" class="selection" style="display: none">
+
+            <div class="slidecontainer">
+                <p id="rapide">rapide </p>
+                <input type="range" min="300" max="2000" value="500" class="slider" id="myRange">
+                <p id="lent">lent</p>
+            </div>
+        </div>
+        <div id="header">
+            <span id="title">
+                <a id="title-Barbre" href="../My_zone/index.html">Zone</a>
+                <a class="visited" id="title-Maire">Fichier vue comme un TABlEAU</a>
+            </span>
+            <a href="../../../../VizuSFSD.html">
+                <img id="homeIcone" src="../home.png" alt="">
+            </a>
+
+        </div>
+        <div id="cote_gauche"></div>
+        <div id="cote_droit"></div>
+        <div id="ins_lec-hide" class="panel-hide" style="background-color: #A7D41E;">
+            <img src="arrow_white_right.png" alt=">" class="rotateLeft" id="entete-hide-img">
+        </div>
+        <div id="ins_lec-Info" class="panel" style="background-color: #A7D41E;  width: 0px; ">
+            <p id="ins_lec-Text"></p>
+        </div>
+
+        <div id="instruction-fichier" class="panel-fichier" style="background-color: rgb(109, 202, 129); width: 0px; ">
+            <p id="commentaire"></p>
+        </div>
+        <div id="instruction-hide-fichier" class="panel-hide-fichier" style="background-color: rgb(82, 188, 105);">
+            <img src="arrow_white_right.png" alt=">" class="rotateRight" id="instruction-hide-img">
+        </div>
+
+        <div id="code-fichier" class="panel-fichier" style="background-color: coral;  width: 0px; height: 252px; ">
+
+        </div>
+        <div id="code-hide-fichier" class="panel-hide-fichier" style="background-color: coral; height:80px; ">
+            <img src="arrow_white_right.png" alt=">" class="rotateRight" id="code-hide-img">
+        </div>
+        <div id="scene">
+            <div id="fichier">
+
+
+                <input id="sub_nb_bloc" type="number" placeholder="Nombre de bloc ?" style="display: none">
+                <input id="sub_nb_enreg_par_bloc" style="display: none" type="number" placeholder="Nombre d'enregistrement par bloc ?">
+                <button id="submit_nb_enreg_par_bloc" style="margin-bottom: 1.5rem !important;display: none ; background-color: #333">Soumettre</button>
+                <div id="ord" class="bulgy-radios" role="radiogroup" style="display: none ; justify-content: space-around ; margin-top: 1rem">
+                    <label>
+          <input type="radio" name="options" id="yes"  />
+          <span class="radio"></span>
+          <span class="label">Zones Ordonées</span>
+        </label>
+                    <label>
+          <input type="radio" name="options" id="no" checked/>
+          <span class="radio"></span>
+          <span class="label">Zones Non ordonnées</span>
+        </label>
+                </div>
+                <input id="sub_seuil_initial" type="number" placeholder="le facteur (%)  de chargement initial" style="display: none;">
+                <input id="sub_seuil_org" type="number" placeholder="le seuil (%) de reorganistaion" style="display: none;">
+                <button id="submit_nb_value" style="display: none;margin-bottom: 1.5rem !important;  background-color: #333">Soumettre</button>
+                <div class="Fichier"></div>
+                <p id="yay" style="display: none"></p>
+
+            </div>
+        </div>
+        <div id="menu-fichier" class="panel-fichier" style="width: 0px; background-color: lightseagreen;  ">
+            <p id="create" class="selection">Créer</p>
+            <p id="search" class="selection">Chercher</p>
+            <p id="insert" class="selection">Inserer</p>
+            <p id="delete" class="selection">Supprimer</p>
+            <p id="reorg" class="selection">Reorganistaion</p>
+        </div>
+        <div id="menu-action">
+            <div id="create-action" class=" create menu-ope" style="left: 193px; display: flex; font-size: 10pt; display: none;">
+                <div id="create-empty" class="menu-option execute" style="float: left ; background-color:lightseagreen ; color:white ;margin-left: 3px;">
+                    <p>Vide</p>
+                </div>
+                <div id="create-random" class="menu-option execute" style="float: left ;background-color: lightseagreen; color: white; margin-left: 3px;">
+                    <p>Alea</p>
+                </div>
+            </div>
+            <div id="search-action" class=" search menu-ope" style="left: 193px; display: none;">
+                <div id="search-input" class="menu-option" style="float: left; margin-left: 3px;">
+                    v=
+                    <input type="number" id="sub_sea" placeholder="La clé ? ..." style="background-color: black; color: white;">
+
+                </div>
+                <div id="submit_sea" class="execute" style="float: left; background-color: lightseagreen; color:white;">
+                    <p>Search</p>
+
+                </div>
+            </div>
+            <div id="insert-action" class=" insert menu-ope" style="left: 193px; display: none; ">
+                <div id="insert-input" class="menu-option" style="float: left; margin-left: 3px;">
+                    v=
+                    <input type="number" id="sub_ins" placeholder="La clé ? ..." style="background-color: black; color: white;">
+
+                </div>
+                <div id="submit_ins" class="execute" style="float: left; background-color: lightseagreen; color:white;">
+                    <p>Insert</p>
+
+                </div>
+            </div>
+            <div id="delete-action" class=" delete menu-ope" style="left: 193px; display: none; ">
+                <div id="delete-input" class="menu-option" style="float: left; margin-left: 3px;">
+                    v=
+                    <input type="number" id="sub_del" placeholder="La clé ? ..." style="background-color: black; color: white;">
+
+                </div>
+                <div id="submit_del" class="execute" style="float: left; background-color: lightseagreen; color:white;">
+                    <p>Supprimer</p>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div id="menu-hide-fichier" class="panel-hide-fichier" style="
+    background-color: lightseagreen;">
+        <img src="arrow_white_right.png" alt=">" class="rotateLeft" id="menu-hide-img">
+    </div>
+
+</body>
+
+</html>

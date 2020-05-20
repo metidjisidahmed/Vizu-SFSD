@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+    <div id="header">
+        <a href='../../../VizuSFSD.html'>
+            <img id="homeIcone" src="home.png" alt="">
+        </a>
+        <span id="title">
+            <a class="visited" id="title-Dense">Dense</a>
+            <a id="title-NonDense" >non Dense</a>
+        </span>
+    </div>
+    <div id="current-action" class="panel"></div>
+    <div id="cote_gauche"></div>
+    <div id="cote_droit"></div>
+    <div id="degre" class="panel" style="background-color: gray;  height: 0px  ; ">
+        <p id="enr2" class="selection">&nbsp;2&nbsp; enregistrements</p>
+        <p id="enr3" class="selection">&nbsp;3&nbsp; enregistrements</p>
+        <p id="enr4" class="selection">&nbsp;4&nbsp; enregistrements</p>
+        <p id="enr5" class="selection">&nbsp;5&nbsp; enregistrements</p>
+        <p id="enr6" class="selection">&nbsp;6&nbsp; enregistrements</p>
+    </div>
+    <div id="degre-hide" class="panel-hide" style="background-color: gray;">
+        <img src="arrow_white_right.png" alt=">" class="rotateDown" id="degre-hide-img">
+    </div>
+
+    <div id="instruction" class="panel" style="background-color: rgb(109, 202, 129); width: 0px; ">
+        <p id="instructionText"></p>
+    </div>
+    <div id="instruction-hide" class="panel-hide" style="background-color: rgb(82, 188, 105);">
+        <img src="arrow_white_right.png" alt=">" class="rotateRight" id="instruction-hide-img">
+    </div>
+
+    <div id="code" class="panel" style="background-color: coral;  width: 0px; ">
+
+    </div>
+    <div id="code-hide" class="panel-hide" style="background-color: coral;  ">
+        <img src="arrow_white_right.png" alt=">" class="rotateRight" id="code-hide-img">
+    </div>
+
+    <div id="menu" class="panel" style="width: 0px; background-color: lightseagreen;  ">
+        <p id="create" class="selection">Tout supprimer</p>
+        <p id="search" class="selection">Rechercher</p>
+        <p id="insert" class="selection">Inserer</p>
+        <p id="delete" class="selection">Supprimer</p>
+        <p id="requete" class="selection">Requete</p>
+        <p id="reorganisation" class="selection">Reorganisation</p>
+    </div>
+    <div id="menu-action">
+        <div id="create-action" class=" create menu-ope" style="left: 193px; display: flex; font-size: 10pt; display: none;">
+            <div id="create-empty" class="menu-option execute" style="float: left ; background-color:lightseagreen ; color:white ;margin-left: 3px;">
+                <p>Vide</p>
+            </div>
+            <div id="create-random" class="menu-option execute" style="float: left ;background-color: lightseagreen; color: white; margin-left: 3px;">
+                <p>Alea</p>
+            </div>
+        </div>
+        <div id="search-action" class=" search menu-ope" style="left: 193px; display: none;">
+            <div id="search-input" class="menu-option" style="float: left; margin-left: 3px;">
+                v=
+                <input type="number" id="sub_sea" value="100" style="background-color: black; color: white;">
+            </div>
+            <div id="submit_sea" class="execute" style="float: left; background-color: lightseagreen; color:white;">
+                <p class="ok">OK</p>
+            </div>
+        </div>
+        <div id="insert-action" class=" insert menu-ope" style="left: 193px; display: none; ">
+            <div id="insert-input" class="menu-option" style="float: left; margin-left: 3px;">
+                v=
+                <input type="number" id="sub_arb" value="100" style="background-color: black; color: white;">
+            </div>
+            <div id="submit_arb" class="execute" style="float: left; background-color: lightseagreen; color:white;">
+                <p class="ok">OK</p>
+            </div>
+        </div>
+        <div id="delete-action" class=" delete menu-ope" style="left: 193px; display: none; ">
+            <div id="delete-input" class="menu-option" style="float: left; margin-left: 3px;">
+                v=
+                <input type="number" id="sub_del" value="100" style="background-color: black; color: white;">
+            </div>
+            <div id="submit_del" class="execute" style="float: left; background-color: lightseagreen; color:white;">
+                <p class="ok">OK</p>
+            </div>
+        </div>
+        <div id="requete-action" class="requete menu-ope" style="left: 193px;display:none;">
+            <div id="max-input" class="menu-option" style="float: left; background-color:lightseagreen ; font-size:14px; color:white">
+                &nbsp;Max
+                <input type="number" id="sub_Max" value="999" style="background-color: black; color: white;">
+            </div>
+            <div id="max-input" class="menu-option" style="float: left; background-color:lightseagreen ; font-size:14px; color:white">
+                &nbsp;Min
+                <input type="number" id="sub_Min" value="001" style="background-color: black; color: white;">
+            </div>
+            <div id="submit_req" class="execute" style="float :left; background-color :lightseagreen; color:white;">
+                <p class="ok">OK</p>
+            </div>
+        </div>
+    </div>
+    <div id="menu-hide" class="panel-hide" style="
+background-color: lightseagreen;">
+        <img src="arrow_white_right.png" alt=">" class="rotateLeft" id="menu-hide-img">
+    </div>
+    <div id="enteteInfo" class="panel" style="background-color: #A7D41E;  width: 0px; ">
+        <p id="enteteText"></p>
+    </div>
+    <div id="entete-hide" class="panel-hide" style="background-color: #A7D41E;">
+        <img src="arrow_white_right.png" alt=">" class="rotateLeft" id="entete-hide-img">
+    </div>
+    <div id="cote-bas">
+        <a id="trigger-about">
+            <!--About-->
+        </a>
+        <a id="trigger-team">
+            <!--Team-->
+        </a>
+        <a id="trigger-terms">
+            <!--Terms of use-->
+        </a>
+    </div>
+    <div id="speedControler">
+        <div class="slidecontainer">
+            <p id="rapide">lent </p>
+            <input type="range" min="50" max="200" value="100" class="slider" id="myRange">
+            <p id="lent">rapide</p>
+        </div>
+    </div>
+
+    <div id="aide-hide"><a>Aide</a></div>
+    <div class="aide">
+        <img id="photo0" class="aideClass" src="aideEnLigne/aidePremièrePage.png" alt="">
+        <img id="photo1" class="aideClass" src="aideEnLigne/aide_dense.png" alt="">
+        <img id="photo2" class="aideClass" src="aideEnLigne/aideNonDense.png" alt="">
+        <img id="photo3" class="aideClass" src="aideEnLigne/dernierePhotoAide.png" alt="">
+        <img id="photo4" class="aideClass" src="aideEnLigne/tauxDeSuppression.png" alt="">
+        <img id="photo5" class="aideClass" src="aideEnLigne/lectureEcriture.png" alt="">
+        <img id="photo6" class="aideClass" src="aideEnLigne/fichierVolumineuxReorg.png" alt="">
+        <img id="photo7" class="aideClass" src="aideEnLigne/fichierVolumineuxNonDenseSupprimer.png" alt="">
+        <img id="photo8" class="aideClass" src="aideEnLigne/plusGrandeCle.png" alt="">
+        <img id="photo9" class="aideClass" src="aideEnLigne/fichierVolumineuxDense.png" alt="">
+        <a id="quitte">quitter</a>
+        <a id="suivant">suivant</a>
+        <a id="precedent" style="display: none">précédent</a>
+    </div>
+    <div class="kolech">
+        <div class="divtable"></div>
+        <div class="fichier"></div>
+        <div class="nouveauFichier"></div>
+    </div>
+</body>
+<script src="main.js "></script>
+<script src="jquery.js"></script>
+
+</html>

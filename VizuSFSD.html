@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VizuSFSD</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="code_source/css/normalize.css">
+    <link rel="stylesheet" href="code_source/css/style.css">
+    <link rel="stylesheet" href="code_source/css/fontawesome.css">
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="code_source/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="code_source/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="code_source/css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="code_source/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="code_source/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="code_source/css\fontawesome-free-5.13.0-web\css\all.min.css">
+    <link rel="stylesheet" href="code_source/css/font-awesome.min.css" type="text/css">
+</head>
+
+<body>
+    <div id="div">
+        <div class="loader"></div>
+    </div>
+    <!--        flèche pour monter en haut de la page           -->
+    <a data-scroll href="#" id="scroll-to-top" style="display: none;">
+        <i id="fleche" class="fas fa-arrow-up"></i>
+    </a>
+    <!--        haut de la page         -->
+    <div class="header">
+        <div class="container1">
+            <div class="navbar">
+                <div title="Visualisation structures de fichiers et de données" class="logo">
+                    <img src="code_source/img/logo.png" alt="">
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li> <a id="acceuil" style="color: #F71414;" href="#">Accueil</a></li>
+                        <li>
+                            <a href="#operations" id="operation">Opérations</a>
+                        </li>
+                        <li> <a id="Apropos" href="#lireEncoreLink">A propos</a></li>
+                        <li> <a id="equipe" href="#about-us">Notre équipe</a></li>
+                        <li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+        <div class="home">
+            <h2>Bienvenue sur notre page</h2>
+            <h1>Structures de fichiers</h1>
+            <a href="#lireEncoreLink" class="primary-btn">savoir plus</a>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <!--     fin haut de la page         -->
+
+    <!-- Menu des opérations et structures -->
+    <section id="operations" class="feature-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h3>Opérations et structures</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div onclick="lien('code_source/structures/zone/My_fichier/index.html')" style="padding: 20px" class="feature__item">
+                        <img style="width: 80px;" src="code_source/img/vectorpaint (2).png">
+                        <h5>Les fichiers vu commes tables</h5>
+                        <p>Les structures de fichiers ordonnées et non ordonnées + les opérations de haut niveaux</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div onclick="lien('code_source/structures/liste/liste-1.html')" class="feature__item">
+                        <img style="width: 70px;" src="code_source/img/vectorpaint (3).png">
+                        <h5>Fichier vu comme liste chaînée</h5>
+                        <p>Les blocs du fichier sont chaînés entre eux.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div onclick="lien('code_source/structures/Hachage/page.html')" class="feature__item">
+                        <img style="width: 70px;" src="code_source/img/hachage.png">
+                        <h5>Hachage</h5>
+                        <p>Les opérations et les méthodes de l'hachage : hachage statique et l'essai linéaire. </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div onclick="lien('code_source/structures/arbre/index1.html')" class="feature__item">
+                        <img style="width: 70px;" src="code_source/img/M-arbre.png">
+                        <h5>Fichiers arborescents</h5>
+                        <p>Structures de fichiers sous forme d'arbres M-aire et B-Arbres</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div onclick="lien('code_source/structures/indexTable/index.html')" class="feature__item">
+                        <img style="width: 80px;" src="code_source/img/vectorpaint2.png">
+                        <h5>Fichiers indexés</h5>
+                        <p>Index sous forme de tableau : dense et non dense</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div onclick="lien('code_source/structures/IndexArbreDeRecherche/index.html')" class="feature__item">
+                        <img style="width: 70px;" src="code_source/img/vectorpaint (4).png">
+                        <h5>Index arborescent</h5>
+                        <p>Index vu comme arbre de recherche binaires.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Fin du menu des opérations et structures   -->
+    <!--   Debut A propos    -->
+    <section id="lireEncoreLink" class="register-domain spad">
+        <div class="photo">
+            <img id="photoLireEncore" src="code_source/img/pc.svg" alt="" srcset="">
+        </div>
+        <div id="lireEncore">
+            <h1 style=" font-family: 'Trebuchet MS', Helvetica, sans-serif;">A Propos</h1>
+            <p style=" font-family: 'Trebuchet MS', Helvetica, sans-serif;">Notre application web confirme un excellent moyen d'apprentissage qui donne à l'étudiant une bonne image des concepts théoriques acquis lors des cours et des travaux dirigés autour du module structures de données et de fichiers.</p>
+        </div>
+    </section>
+    <!-- Caractéristiques et fonctionnalitées -->
+    <section class="choose-plan-section spad" style="padding-top: 50px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <img src="code_source/img/choose-plan.png" alt="">
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="plan__text">
+                        <h3>Caractéristiques et fonctionnalitées</h3>
+                        <ul>
+                            <li><span class="fa fa-check"></span> Représentation visuelle des structures de fichiers et de données</li>
+                            <li><span class="fa fa-check"></span> L’utilisateur peut régler la vitesse de l’animation</li>
+                            <li><span class="fa fa-check"></span> Le logiciel dispose d'une aide en ligne en langue française explicite et relative à chaque écran représentée sous forme de slides</li>
+                            <li><span class="fa fa-check"></span> Animation de chaque phase de l'algorithme </li>
+                            <li><span class="fa fa-check"></span> Faciliter et simplifier les notions de structures de fichiers et de données</li>
+                        </ul>
+                        <a target="_blank" href="code_source/PRJN°3_EQN°11_DAHAMNI_NoticeD'utilisation.pdf" class="primary-btn">Guide d'utilisation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Fin A Propos   -->
+
+    <!--  Debut Notre Equipe -->
+    <section style="background-color: rgba(18, 8, 81, 0.08);" id="about-us" class="team-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h3>notre equipe</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="team__item">
+                        <div class="team__text">
+                            <h5>Metidji Sid Ahmed</h5>
+                            <p>Etudiant en deuxième année cycle préparatoire à école nationale supérieure de l'informatique.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="team__item">
+                        <div class="team__text">
+                            <h5>Belkadi Youcef Yacine</h5>
+                            <p>Etudiant en deuxième année cycle préparatoire à école nationale supérieure de l'informatique.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="team__item">
+                        <div class="team__text">
+                            <h5>Chabounia Aimad</h5>
+                            <p>Etudiant en deuxième année cycle préparatoire à école nationale supérieure de l'informatique.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="team__item">
+                        <div class="team__text">
+                            <h5>Rezki Ramzi</h5>
+                            <p>Etudiant en deuxième année cycle préparatoire à école nationale supérieure de l'informatique.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="team__item">
+                        <div class="team__text">
+                            <h5>Ghebriout Mohamed Imed Eddine</h5>
+                            <p>Etudiant en deuxième année cycle préparatoire à école nationale supérieure de l'informatique.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="team__item">
+                        <div class="team__text">
+                            <h5>Kanaan Loueiy</h5>
+                            <p>Etudiant en deuxième année cycle préparatoire à école nationale supérieure de l'informatique.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Fin Notre Equipe -->
+    <!-- Bas de la page -->
+    <footer class="footer-section">
+        <div class="footer__top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer__top-call">
+                            <h5>Besoin d'aide? Contactez Nous</h5>
+
+                            <h2>+213 23 93 91 34</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer__top-auth">
+                            <h5>Visualisation des structures de fichiers et traitement de données</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__text set-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="footer__text-about">
+                            <div class="footer__logo">
+                                <a href="#"><img src="code_source/img/logo.png" alt=""></a>
+                            </div>
+                            <p>Cette page est un outil d’aide à la simulation visuelle de fonctionnement des opérations de manipulation des structures de fichiers et de données.
+                            </p>
+                            <div class="footer__social">
+                                <a href="#"><i class=" fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-youtube-play"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6">
+                        <div class="footer__text-widget">
+                            <h5>A propos</h5>
+                            <ul>
+                                <li><a href="#lireEncoreLink">Projet</a></li>
+                                <li><a href="#about-us">Notre equipe</a></li>
+                                <li><a href="#operations">Operations et Structures</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6">
+                        <div class="footer__text-widget">
+                            <h5>Menu</h5>
+                            <ul>
+                                <li><a href="#operations">Indexation</a></li>
+                                <li><a href="#operations">structures simples</a></li>
+                                <li><a href="#operations">Hachage</a></li>
+                                <li><a href="#operations">Arborescence</a></li>
+                                <li><a href="#operations">Zones memoires</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="footer__text-widget">
+                            <h5>Contactez nous</h5>
+                            <ul class="footer__widget-info">
+                                <li><span class="fa fa-map-marker"></span> BP 68M Oued Smar, 16309, El Harrach<br/> Alger Algérie</li>
+                                <li><span class="fa fa-mobile"></span> +213 23 93 91 32 | +213 23 93 91 34</li>
+                                <li><span class="fa fa-headphones"></span>prjt2020equipe11@esi.dz</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!-- Fin du bas de page -->
+
+    <script src="code_source/js/jquery.js"></script>
+    <script src="code_source/js/main.js"></script>
+</body>
+
+</html>

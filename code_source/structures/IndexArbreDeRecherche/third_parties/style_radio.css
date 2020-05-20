@@ -1,0 +1,39 @@
+
+.bulgy-radios label {
+    display: inline-block;
+    position: relative;
+    padding-left: 2rem;
+    font-size: 1.4rem;
+    font-style: italic;
+    margin-bottom: 1.2rem;
+    cursor: pointer;
+    color: #555;
+}
+
+.bulgy-radios input {
+    position: absolute;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    left: -2000px;
+}
+.bulgy-radios input:checked ~ .radio {
+    background-color: #0ac07d;
+}
+.bulgy-radios input:checked ~ .radio::after {
+    opacity: 1;
+}
+.bulgy-radios input:checked ~ .label {
+    color: #0bae72;
+}
+
+
+.radio {
+    position: absolute;
+    top: 0.2rem;
+    left: 0;
+    height: 1rem;
+    width: 1rem;
+    background: #c9ded6;
+    border-radius: 50%;
+}

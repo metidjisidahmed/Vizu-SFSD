@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Fichier arborescent</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style1.css">
+    <!-- <link rel="stylesheet" href="jquery-ui/jquery-ui/jquery-ui.css">
+    <link rel="stylesheet" href="jquery-ui/jquery-ui/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jquery-ui/jquery-ui/jquery-ui.theme.css">
+    <link rel="stylesheet" href="style_radio.css"> -->
+</head>
+
+<body id="body">
+    <div id="header">
+        <span id="title">
+                      <a  class="visited" id="title-Maire">Arbre M-aires</a>
+                      <a id="title-Barbre" >B-arbre</a>
+                  </span>
+        <a href="../../../VizuSFSD.html">
+            <img id="homeIcone" src="home.png" alt="">
+        </a>
+
+    </div>
+    <div id="cote_gauche"></div>
+    <div id="cote_droit"></div>
+    <div id="degre" class="panel" style="background-color: gray; width:60px; height: 0px  ; ">
+        <p id="deg2" class="selection">&nbsp;Degre&nbsp;2 </p>
+        <p id="deg3" class="selection">&nbsp;Degre&nbsp;3</p>
+        <p id="deg4" class="selection">&nbsp;Degre&nbsp;4</p>
+        <p id="deg5" class="selection">&nbsp;Degre&nbsp;5</p>
+        <p id="deg6" class="selection">&nbsp;Degre&nbsp;6</p>
+        <p id="deg7" class="selection" style="display:none;">&nbsp;Degre&nbsp;7</p>
+    </div>
+    <div id="degre-hide" class="panel-hide" style="background-color: gray;">
+        <img src="./arrow_white_right.png" alt=">" class="rotateDown" id="degre-hide-img">
+    </div>
+    <div id="instruction" class="panel" style="background-color: rgb(109, 202, 129); width: 0px; ">
+        <p></p>
+    </div>
+    <div id="instruction-hide" class="panel-hide" style="background-color: rgb(82, 188, 105);">
+        <img src="./arrow_white_right.png" alt=">" class="rotateRight" id="instruction-hide-img">
+    </div>
+
+    <div id="code" class="panel" style="background-color: coral;  width: 0px; ">
+
+    </div>
+    <div id="code-hide" class="panel-hide" style="background-color: coral;  ">
+        <img src="./arrow_white_right.png" alt=">" class="rotateRight" id="code-hide-img">
+    </div>
+    <div id="aide-hide"><a>Aide</a></div>
+    <div class="aide">
+        <img id="photo0" class="aideClass" src="aideEnLigne/aide_1.PNG" alt="">
+        <img id="photo1" class="aideClass" src="aideEnLigne/aide_2.PNG" alt="">
+        <img id="photo2" class="aideClass" src="aideEnLigne/aide_3.PNG" alt="">
+        <img id="photo3" class="aideClass" src="aideEnLigne/aide_5.PNG" alt="">
+        <img id="photo4" class="aideClass" src="aideEnLigne/aide_6.PNG" alt="">
+        <img id="photo5" class="aideClass" src="aideEnLigne/aide_4.PNG" alt="">
+        <img id="photo6" class="aideClass" src="aideEnLigne/aide_7.PNG" alt="">
+        <img id="photo7" class="aideClass" src="aideEnLigne/aide_8.PNG" alt="">
+        <img id="photo8" class="aideClass" src="aideEnLigne/aide_9.PNG" alt="">
+        <img id="photo9" class="aideClass" src="aideEnLigne/aide_10.PNG" alt="">
+        <img id="photo10" class="aideClass" src="aideEnLigne/aide_11.PNG" alt="">
+        <img id="photo11" class="aideClass" src="aideEnLigne/aide_12.JPG" alt="">
+        <a id="quitte">quitter</a>
+        <a id="suivant">suivant</a>
+        <a id="precedent" style="display: none">précédent</a>
+    </div>
+    <div id="scene" style="background-color:white;">
+        <svg id="svg" width="4000" height="560">
+            <g id="ligne">
+      
+            </g>
+            <g id="noeuds">
+            </g>
+            <g id="texte-forme">
+      
+            </g>
+      
+          </svg>
+    </div>
+    <div id="current-action" class="panel" style="display: none;"></div>
+
+    <div id="menu" class="panel" style="width: 0px; background-color: lightseagreen;  ">
+        <p id="create" class="selection">Créer</p>
+        <p id="search" class="selection">Rechercher</p>
+        <p id="insert" class="selection">Inserer</p>
+        <p id="delete" class="selection">Supprimer</p>
+        <p id="requete" class="selection">Requete</p>
+        <p id="parcourt" class="selection">Parcourt Inordre</p>
+        <p id="requi" class="selection">Reéquilibrage </p>
+    </div>
+    <div id="menu-action">
+        <div id="create-action" class=" create menu-ope" style="left: 193px; display: flex; font-size: 10pt; display: none;">
+            <div id="create-empty" class="menu-option execute" style="float: left ; background-color:lightseagreen ; color:white ;margin-left: 3px;">
+                <p>Vide</p>
+            </div>
+            <div id="create-input" class="menu-option" style="float: left; margin-left: 3px;">
+                <input type="number" id="sub_nb_enreg" placeholder="NB Enreg?" oninput="maxLengthCheck(this)" maxlength="2" min="1" max="25" style="background-color: #66D6FF ; width: 110px;color: white;">
+            </div>
+            <div id="create-random" class="menu-option execute" style="float: left ;background-color: lightseagreen; color: white; margin-left: 3px;">
+                <p>Alea</p>
+            </div>
+        </div>
+        <div id="search-action" class=" search menu-ope" style="left: 193px; display: none;">
+            <div id="search-input" class="menu-option" style="float: left; margin-left: 3px;">
+                v=
+                <input type="number" id="sub_sea" oninput="maxLengthCheck(this)" value="100" maxlength="3" min="1" max="999" style="background-color: black; color: white;">
+
+            </div>
+            <div id="submit_sea" class="execute" style="float: left; background-color: lightseagreen; color:white;">
+                <p>Recherche</p>
+
+            </div>
+        </div>
+        <div id="insert-action" class=" insert menu-ope" style="left: 193px; display: none; ">
+            <div id="insert-input" class="menu-option" style="float: left; margin-left: 3px;">
+                v=
+                <input type="number" id="sub_arb" oninput="maxLengthCheck(this)" value="100" maxlength="3" min="1" max="999" style="background-color: black; color: white;">
+
+            </div>
+            <div id="submit_arb" class="execute" style="float: left; background-color: lightseagreen; color:white;">
+                <p>Insertion</p>
+
+            </div>
+        </div>
+        <div id="delete-action" class=" delete menu-ope" style="left: 193px; display: none; ">
+            <div id="delete-input" class="menu-option" style="float: left; margin-left: 3px;">
+                v=
+                <input type="number" id="sub_del" oninput="maxLengthCheck(this)" value="100" maxlength="3" min="1" max="999" style="background-color: black; color: white;">
+
+            </div>
+            <div id="submit_del" class="execute" style="float: left; background-color: lightseagreen; color:white;">
+                <p>Supprimer</p>
+
+            </div>
+
+        </div>
+        <div id="requete-action" class="requete menu-ope" style="left: 193px;display:none;">
+            <div id="max-input" class="menu-option" style="float: left; background-color:lightseagreen ; font-size:14px; color:white">
+                &nbsp;Max
+                <input id="sub_Max" oninput="maxLengthCheck(this)" type="number" maxlength="3" value="999" min="1" max="999" style="background-color: black; color: white;">
+
+            </div>
+            <div id="max-input" class="menu-option" style="float: left; background-color:lightseagreen ; font-size:14px; color:white">
+                &nbsp;Min
+                <input type="number" id="sub_Min" oninput="maxLengthCheck(this)" value="1" maxlength="3" min="1" max="999" style="background-color: black; color: white;">
+
+            </div>
+
+            <div id="submit_req" class="execute" style="float :left; background-color :lightseagreen; color:white;">
+                Go</div>
+        </div>
+
+    </div>
+    <div id="menu-hide" class="panel-hide" style="
+          background-color: lightseagreen;">
+        <img src="./arrow_white_right.png" alt=">" class="rotateLeft" id="menu-hide-img">
+    </div>
+    <div id="enteteInfo" class="panel" style="background-color: #A7D41E;  width: 0px; ">
+        <p id="enteteText"></p>
+    </div>
+    <div id="entete-hide" class="panel-hide" style="background-color: #A7D41E;">
+        <img src="arrow_white_right.png" alt=">" class="rotateLeft" id="entete-hide-img">
+    </div>
+    <div id="cote-bas">
+        <a id="trigger-about"></a>
+        <a id="trigger-team"></a>
+        <a id="trigger-terms"></a>
+    </div>
+    <div id="speedControler">
+        <div class="slidecontainer">
+            <p id="rapide">lent </p>
+            <input type="range" min="100" max="170" value="135" class="slider" id="myRange">
+            <p id="lent">rapide</p>
+        </div>
+    </div>
+
+    <!-- <script src="node_modules/jquery/dist/jquery.js"></script> -->
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="jquery-ui/jquery-ui/jquery-ui.js"></script>
+    <script src="./p5.min.js"></script>
+    <script src='./app1.js'></script>
+</body>
+
+</html>

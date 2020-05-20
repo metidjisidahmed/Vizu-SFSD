@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fichier_tab.css">
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jquery-ui/jquery-ui.theme.css">
+    <link rel="stylesheet" href="style_radio.css">
+</head>
+<body>
+    <div id="tab">
+        <div id="fichier">
+            <input id="sub_nb_bloc" type="number" placeholder="Nombre de bloc ?">
+            <button id="submit_nb_bloc" style="margin-bottom: 1.5rem !important;">Submit</button>
+            
+            <input id="sub_nb_enreg_par_bloc" style="display: none;" type="number" placeholder="Nombre d'enregistrement par bloc ?">
+            <button id="submit_nb_enreg_par_bloc" style="display: none;" style="margin-bottom: 1.5rem !important;">Submit</button>
+            
+            <input id="sub_nb_value" type="number" placeholder="Nombre de champ par enregistrement ?" style="display: none;" >
+            <div id="ord" class="bulgy-radios" role="radiogroup" style="display: none ; justify-content: space-around ; margin-top: 1rem">
+                <label>
+                    <input type="radio" name="options" checked />
+                    <span class="radio"></span>
+                    <span class="label">Blocs Ordonées</span>
+                </label>
+                <label>
+                    <input type="radio" name="options" />
+                    <span class="radio"></span>
+                    <span class="label">Blocs Non ordonnées</span>
+                </label>
+            </div>
+            <button id="submit_nb_value" style="display: none;" style="margin-bottom: 1.5rem !important;">Submit</button>
+           <div class="Fichier">
+
+
+                
+            </div>
+        
+            <div style="display: none;" class="operation">
+  
+                <br><br> 
+                
+                <input type="text" id="valeur_operation" placeholder="Inserer une valeur">
+                <button style="border-radius: 7px;" id="RechercheBtn" >Recherche</button>
+                <button style="border-radius: 7px;" id="InsertionBtn" >Insertion</button>
+                <button style="border-radius: 7px;" id="SuppressionBtn">Suppression</button>
+            </div>
+
+
+
+
+            
+            <!--ul class="Fichier">
+                <li>
+                    <ul class="Zone">
+                        <li>
+                            <ul class="ENR">
+                                <li class="item item_f key">Key</li>
+                                <li class="item item_f">Value 1</li>
+                                <li class="item item_f">Value 2</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul class="ENR">
+                                <li class="item item_f key">Key</li>
+                                <li class="item item_f">Value 1</li>
+                                <li class="item item_f">Value 2</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul class="ENR">
+                                <li class="item item_f key">Key</li>
+                                <li class="item item_f">Value 1</li>
+                                <li class="item item_f">Value 2</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="Zone">
+                        <li>
+                            <ul class="ENR">
+                                <li class="item item_f key">Key</li>
+                                <li class="item item_f">Value 1</li>
+                                <li class="item item_f">Value 2</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul class="ENR">
+                                <li class="item item_f key">Key</li>
+                                <li class="item item_f">Value 1</li>
+                                <li class="item item_f">Value 2</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul class="ENR">
+                                <li class="item item_f key">Key</li>
+                                <li class="item item_f">Value 1</li>
+                                <li class="item item_f">Value 2</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="Zone">
+                        <li>
+                            <ul class="ENR">
+                                <li class="item item_f key">Key</li>
+                                <li class="item item_f">Value 1</li>
+                                <li class="item item_f">Value 2</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul class="ENR">
+                                <li class="item item_f key">Key</li>
+                                <li class="item item_f">Value 1</li>
+                                <li class="item item_f">Value 2</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul class="ENR">
+                                <li  class="item item_f key">Key</li>
+                                <li class="item item_f">Value 1</li>
+                                <li class="item item_f">Value 2</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul-->
+
+        </div>   
+    </div>
+<script src="jquery-3.4.1.js"></script>
+<script src="jquery-ui.js"></script>
+    <!--<script src="anime-3.1.0.min.js"></script>-->
+    <script src="./anime-3.1.0.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

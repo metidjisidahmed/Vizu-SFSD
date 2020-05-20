@@ -1,0 +1,605 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    transform: width 2s;
+}
+
+body,
+p {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#degre p {
+    padding: 5px;
+    padding-bottom: 5px;
+    padding-top: 10px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+#homeIcone {
+    width: 28px;
+    position: absolute;
+    z-index: 10;
+    top: 6px;
+    left: 42px;
+    cursor: pointer;
+}
+
+.selection {
+    color: #fff;
+    font-size: 13px;
+    font-family: sans-serif;
+}
+
+#header {
+    height: 40px;
+    padding-top: 0px;
+    padding-right: 30px;
+    padding-bottom: 0px;
+    padding-left: 30px;
+    top: 0;
+    background-color: black;
+}
+
+#title {
+    padding-left: 80px;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #aaa;
+}
+
+#title a {
+    cursor: pointer;
+    margin-right: 10px;
+    padding-top: 10px;
+}
+
+#title .visited {
+    font-weight: 700;
+    color: #fff;
+}
+
+#instruction {
+    bottom: 255px;
+    right: 43px;
+    height: 54px;
+    white-space: normal;
+    opacity: 0.9;
+}
+
+#instruction-hide {
+    position: absolute;
+    bottom: 255px;
+    right: 0;
+    padding: 17px 15px 17px 14px;
+    z-index: 2;
+}
+
+#instruction p {
+    padding: 10px;
+    color: white;
+    font-family: cursive;
+}
+
+#code {
+    bottom: 60px;
+    right: 43px;
+    height: 192px;
+    opacity: 1;
+}
+
+::-webkit-scrollbar {
+    position: absolute;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ddd;
+}
+
+::-webkit-scrollbar-track-piece {
+    background: #777;
+}
+
+#code-hide {
+    position: absolute;
+    bottom: 60px;
+    right: 0;
+    padding: 86px 14px 86px 15px;
+    z-index: 2;
+}
+
+#menu {
+    bottom: 60px;
+    left: 43px;
+    font-family: pt sans;
+    font-size: 13px;
+}
+
+#menu p {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#header a {
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#code p {
+    padding: 3px 10px;
+    margin: 0;
+    font-size: 13px;
+    color: white;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+#menu-hide {
+    position: absolute;
+    bottom: 60px;
+    /*left: 0;*/
+    padding: 77.5px 14px 77.5px 15px;
+}
+
+#cote_droit {
+    position: absolute;
+    ;
+    /* top: 0; */
+    right: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: 100%;
+    width: 40px;
+    background: #000;
+}
+
+#scene {
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    padding-top: 10px;
+    overflow-x: scroll;
+    scrollbar-color: black;
+    scrollbar-width: 10px;
+}
+
+#cote_gauche {
+    /* display: none; */
+    position: absolute;
+    /* top: 0; */
+    left: 0;
+    /* right: 0; */
+    height: 100%;
+    width: 40px;
+    background: #000;
+    /* z-index: 0; */
+}
+
+.panel-hide {
+    position: fixed;
+    cursor: pointer;
+    background: #777;
+}
+
+.panel {
+    position: absolute;
+    color: #000;
+    width: 0;
+    overflow: hidden;
+    background: #777;
+    white-space: nowrap;
+}
+
+#menu-option {
+    position: absolute;
+    margin-left: 3px;
+}
+
+.menu-ope {
+    position: fixed;
+}
+
+.create {
+    position: absolute;
+    bottom: 212px;
+    float: left;
+}
+
+.insert {
+    position: absolute;
+    float: left;
+    bottom: 160px;
+}
+
+.search {
+    position: absolute;
+    float: left;
+    bottom: 185px;
+}
+
+.delete {
+    position: absolute;
+    bottom: 135px;
+    float: left;
+}
+
+.requete {
+    position: absolute;
+    bottom: 110px;
+    float: left;
+}
+
+#cote-bas {
+    padding: 12px 30px;
+    background: #000;
+    color: #fff;
+    font-size: 12px;
+    text-align: right;
+}
+
+#sub_Min,
+#sub_Max {
+    width: 40px;
+    padding: 5px 3px 4px;
+}
+
+#cote-bas a {
+    padding-left: 15px;
+    cursor: pointer;
+}
+
+#cote-bas {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+}
+
+#menu-action input {
+    /* width: 35px; */
+    padding: 5px 7px 4px;
+}
+
+#entete-hide {
+    position: absolute;
+    left: 0;
+    bottom: 238px;
+    /* bottom: 215.5px; */
+    padding: 17px 15px 17px 14px;
+    z-index: 2;
+}
+
+#enteteText {
+    padding: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    font-weight: bold;
+}
+
+#current-action {
+    top: 50px;
+    right: 150px;
+    width: 400px;
+    display: block;
+    background: 0 0;
+    overflow: normal;
+    white-space: normal;
+    text-align: right;
+    color: #000;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: cursive;
+}
+
+#enteteInfo {
+    bottom: 238px;
+    left: 43px;
+    height: 54px;
+    white-space: normal;
+    opacity: 0.9;
+    z-index: 2;
+    position: absolute;
+}
+
+input {
+    border: none;
+    outline: none;
+    margin: 0;
+}
+
+input:not(.requete) {
+    width: 100px;
+}
+
+.execute {
+    padding: 3px 8px;
+    cursor: pointer;
+}
+
+.error {
+    background-color: red;
+}
+
+.success {
+    background-color: springgreen;
+}
+
+#degre {
+    position: absolute;
+    top: 41px;
+    right: 135px;
+    opacity: 0.8;
+    z-index: 2;
+}
+
+#degre-hide {
+    position: absolute;
+    top: 0;
+    right: 150px;
+    padding: 10px 17px 10px 17px;
+}
+
+.rotateLeft {
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+}
+
+.rotateRight {
+    transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+}
+
+.rotateTop {
+    transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+}
+
+.ligneExecute {
+    background-color: #777;
+}
+
+.rotateDown {
+    transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+}
+
+.slidecontainer {
+    width: 10px;
+}
+
+#rapide {
+    position: absolute;
+    right: 12px;
+    bottom: -1.5px;
+}
+
+#lent {
+    position: absolute;
+    left: 122px;
+    bottom: -1px;
+}
+
+.slidecontainer p {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 13px;
+    color: #fff;
+}
+
+#speedControler {
+    bottom: 13px;
+    position: absolute;
+    z-index: 3;
+    left: 75px;
+}
+
+#myRange {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 6px;
+    background: rgb(136, 130, 130);
+    outline: none;
+    opacity: 1;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 2;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 11px;
+    height: 6px;
+    background: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+* :not(#menu, #code, #degre) {
+    transition: background-color 500ms;
+}
+
+.aide {
+    overflow: hidden;
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.575);
+    animation-name: openmodal;
+    animation-duration: 1s;
+}
+
+.aide img {
+    position: relative;
+    z-index: 11;
+}
+
+@keyframes openmodal {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.aideClass {
+    width: 70%;
+    height: 85%;
+    left: 170px;
+    top: 43px;
+}
+
+#quitte {
+    position: fixed;
+    z-index: 101;
+    right: 190px;
+    transition: background-color 500ms;
+    top: 30px;
+    background-color: rgb(34, 69, 200);
+    cursor: pointer;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 4px 17px;
+    border-radius: 5px;
+    margin-bottom: 0px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 20px;
+}
+
+#suivant {
+    position: fixed;
+    z-index: 101;
+    right: 190px;
+    bottom: 30px;
+    transition: background-color 500ms;
+    background-color: rgb(34, 69, 200);
+    cursor: pointer;
+    color: #ffffff;
+    /* font-weight: bold; */
+    text-decoration: none;
+    padding: 4px 17px;
+    border-radius: 5px;
+    /* margin-bottom: 0px; */
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 20px;
+    box-shadow: 3px 5px 82px #00000070;
+}
+
+#photo1,
+#photo2 {
+    display: none;
+}
+
+#precedent {
+    position: fixed;
+    z-index: 101;
+    transition: background-color 500ms;
+    left: 140px;
+    bottom: 30px;
+    background-color: rgb(34, 69, 200);
+    cursor: pointer;
+    color: #ffffff;
+    /* font-weight: bold; */
+    text-decoration: none;
+    padding: 4px 17px;
+    border-radius: 5px;
+    /* margin-bottom: 0px; */
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 20px;
+    box-shadow: 3px 5px 82px #00000070;
+}
+
+#aide-hide {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    position: absolute;
+    right: 80px;
+    top: -5px;
+    padding: 11px 7px;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+input::placeholder {
+    text-align: center;
+    font-style: italic;
+}
+
+#yay {
+    display: inline;
+    background: green;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    margin-left: 1.5rem;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #BBB;
+}

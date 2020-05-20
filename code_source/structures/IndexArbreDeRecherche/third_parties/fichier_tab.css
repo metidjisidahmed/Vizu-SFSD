@@ -1,0 +1,116 @@
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+.ENR {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+.item{
+    display: inline;
+    border: 2px solid black;
+    background: antiquewhite;
+    font-size: 1rem;
+    text-align: center;
+    padding : auto;
+}
+.Zone {
+    /*display:block;*/
+    padding:5;
+    list-style-type: none;
+}
+.Fichier {
+    position: relative;
+    padding: 1% 1% 1% 1%;
+    display:flex;
+    list-style-type: none;
+}
+.item_f {
+    font-size: 1rem !important;
+}
+.key {
+    min-width: 4.5rem !important;
+}
+
+#sub_nb_bloc,#sub_nb_enreg_par_bloc,#sub_nb_value{
+    height:2rem !important;
+    display:block;
+    margin:auto;
+    text-align:center;
+    border-radius:10px;
+    font-size:1.5rem;
+    min-width:55vw;
+    color:darkblue;
+    font-weight: bold;
+    margin-bottom:1.5rem !important;
+}
+#sb_nb_bloc,#sub_nb_enreg_par_bloc,#sub_nb_value::placeholder {
+    text-align: center;
+    font-style: italic;
+}
+
+#submit_nb_enreg_par_bloc, #submit_nb_bloc, #submit_nb_value, #submit_enreg_zone , #submit_zone , #trier_zone , #rechercher_zone , #start_rech , #retour_btn , #supprimer_enr, #inserer_enr , #start_ins , #start_supp ,#extraire_enrs, #start_extraire{
+    display:block;
+    margin:  1.5rem auto;
+    justify-self: center;
+    text-align: center;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: normal;
+    color : white;
+    padding:0.4rem 1.3rem;
+    background-color : green;
+    border-radius: 10px ;
+
+}
+#submit_enreg:hover, #submit_enreg_zone:hover , #submit_zone:hover , #trier_zone:hover , #rechercher_zone:hover , #start_rech:hover , #retour_btn:hover , #supprimer_enr:hover, #inserer_enr:hover , #start_ins:hover , #start_supp:hover ,#extraire_enrs:hover, #start_extraire:hover{
+    cursor: pointer;
+    background: darkgreen;
+}
+#yay{
+    display: inline;
+    background: green;
+    color: white;
+    padding: 0.5rem 1rem;
+    margin-top: 0.4rem;
+    border-radius: 4px;
+    margin-left: 1.5rem;
+    margin-bottom: 0.1rem;
+}
+.bg {
+    text-align: center;
+}
+
+.bg1 {
+    z-index:15;
+    background-color: antiquewhite;
+    height: 5rem;
+    color:antiquewhite;
+}
+.bg2 {
+    z-index: 10;
+    background-color: white;
+    /*position :relative;*/
+    /*left:20px;*/
+    color:white;
+
+}
+
+.real_key ,.real_item {
+    z-index: 20;
+    position: absolute;
+    text-align: center;
+    align-self: center;
+    font-size: 2rem;
+
+}
+.item .bg2 , .real_item{
+    width:9.0625rem ;
+}
+.key .bg2 , .real_key {
+     width :6.875rem ;
+}
+
+
