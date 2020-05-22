@@ -11,12 +11,12 @@
 ### - Opérations (code_source / structures) :arrows_clockwise: :
 
 Ce dossier contient 6 sous-dossiers, chacun de ces sous-dossiers présente le code souce d'une structure
-- arbre: fichier arborescent : codé par [Youcef Yacine Belkadi] (@ youcef350)
-- liste: fichier vu comme liste: codé par [Imad Ghebriout] (https://github.com/Mohamed-Imed-Eddine)
-- indexTable: index sous forme de table: codé par [Louiey Kanaan] (https://github.com/loueiy807)
-- IndexArbreDeRecherche: index sous forme d'arbre de recherche: codé par [Chabounia Imad] (https://github.com/imadchabounia)
-- Hachage: operation de hachage: codé par [Rezki Ramzi] (https://github.com/Rezki-Ramzi)
-- zone: fichier vu comme table et zone memoire: codé par moi-meme  [Metidji Sid Ahmed] (https://github.com/metidjisidahmed)
+- arbre: fichier arborescent : codé par [Youcef Yacine Belkadi](@ youcef350)
+- liste: fichier vu comme liste: codé par [Imad Ghebriout](https://github.com/Mohamed-Imed-Eddine)
+- indexTable: index sous forme de table: codé par [Louiey Kanaan](https://github.com/loueiy807)
+- IndexArbreDeRecherche: index sous forme d'arbre de recherche: codé par [Chabounia Imad](https://github.com/imadchabounia)
+- Hachage: operation de hachage: codé par [Rezki Ramzi](https://github.com/Rezki-Ramzi)
+- zone: fichier vu comme table et zone memoire: codé par moi-meme  [Metidji Sid Ahmed](https://github.com/metidjisidahmed)
 
   - Chaque structure a son propre code HTMl, Css & Js ainsi qu'une Images pour l'aide en ligne
 
