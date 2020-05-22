@@ -22,7 +22,7 @@ Ce dossier contient 6 sous-dossiers, chacun de ces sous-dossiers présente le co
 
 ### - Droit d'auteurs :copyright: :
 
-:copyright: 2020 ESI 2CP Equipe 11 Projet 3
+:copyright: 2019-2020 ESI 2CP Equipe 11 Projet 3
 
 
 ## 2. ENGLISH :uk: : 
